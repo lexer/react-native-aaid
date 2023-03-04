@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@sparkfabrik/react-native-idfa-aaid": ["./src/index"]
+      "@lexer/react-native-aaid": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
