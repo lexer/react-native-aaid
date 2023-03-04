@@ -5,10 +5,10 @@ export type AdvertisingInfoResponse = {
   isAdTrackingLimited: boolean;
 };
 
-type ReactNativeIdfaAaidType = {
+type ReactNativeAaidType = {
   getAdvertisingInfo(): Promise<AdvertisingInfoResponse>;
 };
 
-const { ReactNativeIdfaAaid } = NativeModules;
+const { ReactNativeAaidType } = NativeModules;
 
-export default ReactNativeIdfaAaid as ReactNativeIdfaAaidType;
+export default ReactNativeAaidType as ReactNativeAaidType;

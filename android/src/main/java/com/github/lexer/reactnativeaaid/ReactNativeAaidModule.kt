@@ -1,4 +1,4 @@
-package com.sparkfabrikreactnativeidfaaaid
+package com.github.lexer.reactnativeaaid
 
 import android.util.Log;
 
@@ -10,10 +10,10 @@ import com.facebook.react.bridge.WritableNativeMap
 
 import com.google.android.gms.ads.identifier.AdvertisingIdClient;
 
-class ReactNativeIdfaAaidModule(private val reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext) {
+class ReactNativeAaidModule(private val reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext) {
 
     override fun getName(): String {
-        return "ReactNativeIdfaAaid"
+        return "ReactNativeAaid"
     }
 
     @ReactMethod
