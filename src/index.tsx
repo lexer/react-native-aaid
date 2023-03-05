@@ -1,14 +1,14 @@
-import { NativeModules } from 'react-native';
+import { NativeModules, Platform } from 'react-native';
 
 export type AdvertisingInfoResponse = {
   id: string | null;
   isAdTrackingLimited: boolean;
 };
 
-type ReactNativeAaidType = {
-  getAdvertisingInfo(): Promise<AdvertisingInfoResponse>;
-};
-
-const { ReactNativeAaidType } = NativeModules;
-
-export default ReactNativeAaidType as ReactNativeAaidType;
+export function getAdvertisingInfo(): Promise<AdvertisingInfoResponse> {
+  if (Platform.OS === 'android') {
+    return NativeModules.ReactNativeAaid.getAdvertisingInfo();
+  } else {
+    throw new Error('only Android is supported');
+  }
+}
